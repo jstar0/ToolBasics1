@@ -1,0 +1,21 @@
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    \addtocontents{toc}{\protect\contentsline{chapter}{附录}{}{}}
+}{%
+    \addtocontents{toc}{\protect\contentsline{chapter}{Appendices}{}{}}
+}
+
+\blankpage\newgeometry{margin=4cm}
+\begin{center}
+    \scshape % Font style
+    \thispagestyle{empty}
+        
+    \vspace*{\fill}
+    \ifthenelse{\equal{\getLanguage}{chinese}}{%
+        {\LARGE\fontsize{20}{26}\selectfont\textcolor{OUCBlue}{附录}\par}
+    }{%
+        {\LARGE\fontsize{20}{26}\selectfont\textcolor{OUCBlue}{Appendices}\par}
+    }
+    \vspace*{\fill}
+\end{center}
+\restoregeometry
+\blankpage

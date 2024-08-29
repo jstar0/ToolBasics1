@@ -1,0 +1,22 @@
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    \addtocontents{toc}{\protect\contentsline{chapter}{附件}{}{}}
+}{%
+    \addtocontents{toc}{\protect\contentsline{chapter}{Annexes}{}{}}
+}
+
+\setcounter{chapter}{12} % To start at the "M" chapter
+\blankpage\newgeometry{margin=4cm}
+\begin{center}
+    \scshape % Font style
+    \thispagestyle{empty}
+        
+    \vspace*{\fill}
+    \ifthenelse{\equal{\getLanguage}{chinese}}{%
+        {\LARGE\fontsize{20}{26}\selectfont\textcolor{OUCBlue}{附件}\par}
+    }{%
+        {\LARGE\fontsize{20}{26}\selectfont\textcolor{OUCBlue}{Annexes}\par}
+    }
+    \vspace*{\fill}
+\end{center}
+\restoregeometry
+\blankpage
